@@ -26,9 +26,12 @@ Lab still open?
 Maybe don't use LED array because will have to return it - uLCD instead of this? ask Oscar or Maddie
 
 ## Schedule:
-Dec. 15 - presentation day  
-Dec. 1 & 6 - class time to put everything together  
+Nov. 22 - meeting to draw out how it all looks/interacts together (Hive 12:30, whiteboard)  
+Nov. 22-30 - Work on individual parts, help others if needed
 Nov. 29 - class time to make sure all individual parts are working  
-Nov. 22 - meeting to draw out how it all looks/interacts together (Hive 12:30, whiteboard)
+Dec. 1 & 6 - class time to put everything together  
+Dec. 1-10 - Integration
+Dec. 11-14 - Finalize documentation and presentation
+Dec. 15 - presentation day  
   
 How to format this page: https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax
