@@ -1,4 +1,4 @@
-# 🍭Hands-Free Candy Dispenser🍬 (ECE 4180 Fall 2021)
+# 🍭Automated Candy Dispenser🍬 (ECE 4180 Fall 2021)
 Made by: Ikenna Nwokedi, Harneet Sethi, Felicia E, Anna Yue
 
 ## 🍫Project Description🍫
