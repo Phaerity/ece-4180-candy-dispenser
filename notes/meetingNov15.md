@@ -30,7 +30,7 @@ Nov. 22 - meeting to draw out how it all looks/interacts together (Hive 12:30, w
 Nov. 22-30 - Work on individual parts, help others if needed  
 Nov. 29 - class time to make sure all individual parts are working  
 Dec. 1 & 6 - class time to put everything together  
-Dec. 1-10 - Integration
+Dec. 1-10 - Integration  
 Dec. 11-14 - Finalize documentation and presentation  
 Dec. 15 - presentation day  
   
