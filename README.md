@@ -27,3 +27,4 @@ Class D amplifier
 
 ## 🛠️Tools Needed🛠️
 Laser cutter  
+3D Printer  
