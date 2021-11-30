@@ -7,8 +7,8 @@ This device dispenses candy in a hands-free manner, similar to how hands-free so
 ## ⚡Parts List⚡
 ### Robot Chassis
 Dual H-bridge  
-2 servos  
-Chassis parts from kit  
+2 DC motors  
+Chassis parts from kit (Sparkfun Shadow Chassis)  
 Bluetooth module  
 Adafruit app on Andriod/iOS  
 Battery pack  
@@ -17,8 +17,9 @@ Mbed
 Lidar  
 Sonar  
 LEDs  
-1 servo  
-Plywood  
+Transistor  
+1 DC motor  
+Plywood/MDF  
 Wood glue  
 Battery pack  
 Mbed  
@@ -28,3 +29,4 @@ Class D amplifier
 ## 🛠️Tools Needed🛠️
 Laser cutter  
 3D Printer  
+Drill  
