@@ -30,3 +30,9 @@ Class D amplifier
 Laser cutter  
 3D Printer  
 Drill  
+Wood glue  
+
+# Instructions
+We started off by creating box using the website https://en.makercase.com/#/. The settings we used are as follows: Basic Box, Width 5 in., Height 8 in., Length 8 in., Outside dimensions, Material Thickness 1/4 in., Closed box, Finger joints sized 1.0915. These settings can be customized based on how big you want the dispenser to be and thickness of your wood. The box plans can be downloaded with labels disabled and separate panel layout, and these files can be used to laser cut the box at either the Hive or Invention Studio. The files we used are provided in the resources folder.  
+
+The robot chassis can be assembled following the Sparkfun guides. To add Bluetooth control...  
