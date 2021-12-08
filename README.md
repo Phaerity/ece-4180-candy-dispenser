@@ -24,6 +24,9 @@ Battery pack (same as above, or https://www.sparkfun.com/products/9835)
 Mbed (same as above)  
 Speaker (https://www.sparkfun.com/products/11089)  
 Class D amplifier (https://www.sparkfun.com/products/11044)  
+RGB LED (https://www.sparkfun.com/products/10820)  
+uLCD (https://www.sparkfun.com/products/11377)  
+
 ### Miscellaneous
 Wires  
 Candy (about the size of Hershey Kisses)  
