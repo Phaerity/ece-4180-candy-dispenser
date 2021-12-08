@@ -2,7 +2,7 @@
 Made by: Ikenna Nwokedi, Harneet Sethi, Felicia E, Anna Yue
 
 ## 🍫Project Description🍫
-This device dispenses candy in a hands-free manner, similar to how hands-free soap dispensers work. The dispenser will use a lidar to detect motion and a servo to open/close a hatch that releases candy. Inside the dispenser, there is a sonar to detect how much candy is left, and this information is displayed as a status bar using LEDs. The dispenser itself will sit on a robot chassis such that someone can drive it around using Bluetooth.
+This device dispenses candy in a hands-free manner, similar to how hands-free soap dispensers work. The dispenser will use a lidar to detect motion and a DC motor to spin some blades that release candy. Inside the dispenser, there is a sonar to detect how much candy is left, and this information is displayed as a status bar using colored LEDs. The dispenser itself will sit on a robot chassis such that someone can drive it around using Bluetooth.
 
 ## ⚡Parts List⚡
 ### Robot Chassis
@@ -16,7 +16,7 @@ Mbed
 ### Candy Dispenser
 Lidar  
 Sonar  
-LEDs  
+LEDs (1 red, 1 green, 1 yellow)  
 Transistor  
 1 DC motor  
 Plywood/MDF  
@@ -31,6 +31,7 @@ Laser cutter
 3D Printer  
 Drill  
 Wood glue  
+Super glue
 
 # Instructions
 ## Cutting the Box
@@ -40,3 +41,6 @@ Furthermore, the box must be modified so that the bottom level becomes like a sh
 
 ## The Chassis
 The robot chassis can be assembled following the Sparkfun guides. To add Bluetooth control...  
+
+## The Blades
+For the part that releases the candy...
