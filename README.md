@@ -39,6 +39,8 @@ Super glue
 ## Cutting the Box
 We started off by creating box using the website https://en.makercase.com/#/. The settings we used are as follows: Basic Box, Width 5 in., Height 8 in., Length 8 in., Outside dimensions, Material Thickness 1/4 in., Closed box, Finger joints sized 1.0915. These settings can be customized based on how big you want the dispenser to be and thickness of your wood. The box plans can be downloaded with labels disabled and separate panel layout, and these files can be used to laser cut the box at either the Hive or Invention Studio. The files we used are provided in the resources folder.  
 
+![Alt text](../master/diagrams/just_box.jpg?raw=true "Title")
+
 Furthermore, the box must be modified so that the bottom panel becomes like a shelf (see picture). We cut rectangular holes into the sides of the box so that the shelf could "slide" in, but there are other ways to do it if preferable. An additional rectangular hole was cut on the back panel to facillitate wiring, but again this can be changed as you see fit. The files we used to cut the holes are provided in the resources folder.  
 
 For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a xx by xx rectangle on the front panel. For the windmill blade hole, we cut a xx by xx rectangle on the shelf panel.
