@@ -6,25 +6,25 @@ This device dispenses candy in a hands-free manner, similar to how hands-free so
 
 ## ⚡Parts List⚡
 ### Robot Chassis
-Dual H-bridge  
-2 DC motors  
-Chassis parts from kit (Sparkfun Shadow Chassis)  
-Bluetooth module  
-Adafruit app on Andriod/iOS  
-Battery pack  
-Mbed  
+Dual H-bridge (https://www.sparkfun.com/products/14450)  
+2 DC motors (https://www.sparkfun.com/products/13302)  
+Chassis parts from kit (Sparkfun Shadow Chassis https://www.sparkfun.com/products/13301)  
+Bluetooth module (https://www.adafruit.com/product/2479)  
+Adafruit app on Andriod/iOS (Bluefruit Connect)  
+Battery pack (comes with Shadow Chassis)  
+Mbed (https://www.sparkfun.com/products/9564)  
 ### Candy Dispenser
-Lidar  
-Sonar  
-LEDs (1 red, 1 green, 1 yellow)  
-Transistor  
-1 DC motor  
-Plywood/MDF  
+Lidar (https://www.adafruit.com/product/3317)  
+Sonar (https://www.sparkfun.com/products/15569)  
+LEDs (1 red, 1 green, 1 yellow) (https://www.sparkfun.com/products/12062)  
+Transistor (https://www.sparkfun.com/products/12959)  
+1 DC motor (same as above)  
+Plywood/MDF (https://www.homedepot.com/p/1-4-in-x-2-ft-x-4-ft-Medium-Density-Fiberboard-1508104/202089069#overlay)  
 Wood glue  
-Battery pack  
-Mbed  
-Speaker  
-Class D amplifier  
+Battery pack (same as above, or https://www.sparkfun.com/products/9835)  
+Mbed (same as above)  
+Speaker (https://www.sparkfun.com/products/11089)  
+Class D amplifier (https://www.sparkfun.com/products/11044)  
 
 ## 🛠️Tools Needed🛠️
 Laser cutter  
