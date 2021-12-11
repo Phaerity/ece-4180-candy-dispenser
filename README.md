@@ -71,3 +71,12 @@ The robot chassis can be assembled following the Sparkfun guides. To add Bluetoo
 
 ## Combining Everything
 The box can sit exactly on top of the chassis...
+
+### Sonar and Volume Indicator LEDs
+One component of the project is a sonar and led system that continuously measures the depth of candies in the dispenser and alerts the user to how full the box currently is by turning on separate LEDs.
+
+There are three LEDs: green to indicate a full box or a high level of candies, yellow to indicate a medium level of candies, and red to indicate a low level of candies that will need to be quickly replenished.
+
+The sonar used is a HC-SR04 sonar module. It is mounted to the inside of the top of the box. The detection range is around3-400 cm with around a 15 degree beam width. Its transducers for transmitting and receiving signals are connected to the mbed microcontroller at pins 6 and 7. It uses it's transducers to send out a signal and receive an echo back. The speed of sound and the time as returned by a timer interrupt for the delay transmission and reception are used to calculate the distance between the sonar and the candies closest to it.
+
+Depending on the distance that the sonar meausures, either one of the LEDs will be switched on while the others are turned off or all LEDs will be turned off and an error message will output through the COM port.
