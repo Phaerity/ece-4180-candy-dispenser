@@ -46,7 +46,9 @@ We started off by creating box using the website https://en.makercase.com/#/. Th
 
 Furthermore, the box must be modified so that the bottom panel becomes like a shelf (see picture). We cut rectangular holes into the sides of the box so that the shelf could "slide" in, but there are other ways to do it if preferable. An additional rectangular hole was cut on the back panel to facillitate wiring, but again this can be changed as you see fit. The files we used to cut the holes are provided in the resources folder.  
 
-For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a xx by xx rectangle on the front panel. For the windmill blade hole, we cut a xx by xx rectangle on the shelf panel.
+For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a xx by xx rectangle on the front panel. For the windmill blade hole, we cut a xx by xx rectangle on the shelf panel.  
+
+> **Note:** We originally proposed using an LED array to display the status for the amount of candy left, but we changed this to individual LEDs to avoid having to replace the parts at the end of the semester.
 
 ![Modified Box](../main/diagrams/modified_box.JPG?raw=true "Modified Box")
 
