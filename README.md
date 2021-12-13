@@ -78,7 +78,13 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.  
 
 ## The Chassis
-The robot chassis can be assembled following the Sparkfun guides. To add Bluetooth control...  
+The robot chassis can be assembled following the Sparkfun guide: https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis. Bluetooth control is added using the Adafruit Bluefruit LE UART Friend board. The Adafruit board mini slide must be set to "UART" (not "CMD"). The "Adafruit Bluefruit BLE" app is used for the user interface and can be found on iOS and Andriod. Select "UART" mode on the phone window and connect to the board. A blue LED should turn on once connected.
+
+![]()
+
+A 6 V battery pack is used to power the two motors attached to the wheels. A dual H-bridge will regulate the speed and direction of the motor wheels. Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 set the speed level of the wheels (on a scale from 0 to 1). While the up and down buttons move the motors forward and backward respectfully, the left and right buttons inverse the direction of both motors, resulting in a rotational movement around the chassis center. The motors must gradually increase to their set speed for a minimum of a second to keep the mbed from undervolting. This is done with a separate thread that terminates at the release of the control button. 
+
+![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
 
 ## Combining Everything
 The box can sit exactly on top of the chassis...
