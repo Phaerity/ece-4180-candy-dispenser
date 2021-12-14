@@ -30,14 +30,15 @@ uLCD (https://www.sparkfun.com/products/11377)
 ### Miscellaneous
 Wires  
 Candy (about the size of Hershey Kisses)  
+Wood glue  
+Super glue  
+Electrical tape  
+Masking tape  
 
 ## 🛠️Tools Needed🛠️
 Laser cutter  
 3D Printer  
 Drill  
-Wood glue  
-Super glue  
-Electrical tape  
 
 # How It Works
 ## Sonar and Capacity Indicator LEDs
