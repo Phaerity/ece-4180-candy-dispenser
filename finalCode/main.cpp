@@ -45,7 +45,7 @@ volatile bool changed = false;
 DigitalOut shdn(p25);
  
 DigitalOut myled(LED1); // comment out later
-DigitalOut Ctrl(p8);
+PwmOut Ctrl(p24);
 // This VL53L0X board test application performs a range measurement in polling mode
 // Use 3.3(Vout) for Vin, p28 for SDA, p27 for SCL, P26 for shdn on mbed LPC1768
 
@@ -86,8 +86,8 @@ void thread1(void const *args)
     sonar.stop();
     // read timer
     correction = sonar.read_us();
-    //printf("Approximate software overhead timer delay is %f uS\n\r", correction);
-    
+    pc.printf("Approximate software overhead timer delay is %f uS\n\r", correction);
+
     //Loop to read Sonar distance values, scale, and print
     while(1) {
     // trigger sonar to send a ping
@@ -106,31 +106,31 @@ void thread1(void const *args)
     //subtract software overhead timer delay and scale to cm
         //printf("The time taken was %d seconds\n", sonar.read_us());
         ::distance = (sonar.read_us()-correction)/58.0;
-        //printf(" %f cm \n\r", ::distance);
+        //pc.printf(" %f cm \n\r", ::distance);
         if (::distance <= 6.53) {
             green = 1;
             yellow = 0;
             red = 0;
-            //printf("GREEN \n\r");
+            //pc.printf("GREEN \n\r");
         } else if ((::distance > 6.53) && (::distance <= 8.167)) {
             green = 0;
             yellow = 1;
             red = 0;
-            //printf("YELLOW \n\r");
+            //pc.printf("YELLOW \n\r");
         } else if ((::distance > 8.167) && (::distance <= 9.8)) {
             green = 0;
             yellow = 0;
             red = 1;
-            //printf("RED \n\r");
+            //pc.printf("RED \n\r");
         } else if (::distance > 9.8) {
             green = 0;
             yellow = 0;
-            red = 0;
-            //printf("ERROR: %f cm is larger than the box \n\r", ::distance);
+            red = 1;
+            //pc.printf("ERROR: %f cm is larger than the box \n\r", ::distance);
         }
             
     //wait so that any echo(s) return before sending another ping
-        Thread::wait(5000);
+        Thread::wait(50);
     }
 }
 
@@ -154,6 +154,7 @@ int main()
     
     // Setup Interrupt callback function for a pb hit
     //pb.attach_deasserted(&pb_hit_callback);
+    pc.printf("Initialized lidar\r\n");
     
     // Init ulcd
     uLCD.cls();
@@ -164,9 +165,12 @@ int main()
     uLCD.printf("Place hand under dispenser to receive candy!\n");
     changed = false;
     
+    pc.printf("initizlized ulcd\r\n");
+    
     // start threads
     Thread t1(thread1); //start thread1
     
+    pc.printf("Starting main loop\r\n");
     //loop taking and printing distance
     while (1) {
         status = board->sensor_centre->get_distance(&distance);
@@ -183,12 +187,17 @@ int main()
                 changed = false;
             }
             
-            if (distance < 50) {
-                Ctrl = 1;
-                Thread::wait(40);
+            if (distance < 70) {
                 Ctrl = 0;
+                for (int i = 0; i < 10; i++) {
+                    Ctrl = Ctrl + 0.1;    
+                }
+                Thread::wait(80);
+                for (int i = 0; i < 10; i++) {
+                    Ctrl = Ctrl - 0.1;    
+                }
                 
-                mySpeaker.PlaySong(note, duration, 0.1);
+                mySpeaker.PlaySong(note, duration, 0.01);
                 RGBred = 1;
                 RGBgreen = 1;
                 RGBblue = 1;
@@ -198,8 +207,13 @@ int main()
                 uLCD.printf("Remove hand to stop receiving candy\n");
                 changed = true;
                 
-                Thread::wait(4500);
+                while (distance < 70) {
+                    status = board->sensor_centre->get_distance(&distance);
+                    Thread::wait(10);
+                }
+                //Thread::wait(4500);
             }
         }
+        Thread::wait(10);
     }
 }
