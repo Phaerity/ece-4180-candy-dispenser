@@ -93,7 +93,7 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 
 Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.
 
-![Schematic 1](../main/diagrams/Schematic-1.jpg?raw=true "Schematic 1")
+![Schematic 1](../main/diagrams/Schematic-1.svg?raw=true "Schematic 1")
 
 <table>
 <tr><th> Sonar </th><th>LED </th></tr>
