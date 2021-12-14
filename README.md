@@ -155,7 +155,6 @@ Once the components are in place, they can be wired following the schematic belo
 | GND  | GND | GND |
 | VU (5V)  | 5V | 5V |
 | P9 | RX | TX |
-| P10 | RX | TX |
 | P10 | TX | RX |
 | P11 | RESET | RESET |
 
@@ -224,8 +223,8 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 |:-------------:|:-------------:|:-------------:|:-------------:|
 |GND|GND  ||
 |VM, VCC|5V|||
-|A01||GND (BLACK)|
-|A02||POWER (RED)|
+|A01||GND (BLACK)||
+|A02||POWER (RED)||
 |B01|||POWER(RED)|
 |B02|||GND(BLACK)|
 
