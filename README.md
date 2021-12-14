@@ -117,16 +117,16 @@ Once the components are in place, they can be wired following the schematic belo
 
 
 <table>
-<tr><th> MOSFET and Motor connections</th><th> DC Motor </th><th>
+<tr><th> MOSFET </th><th> DC Motor </th></tr>
 <tr><td>
 
-| mbed       | MOSFET (Transistor) |
+| mbed     | MOSFET (Transistor)|
 | :---: |:---:|
 | VU (5V) | GND (JP2-2 GND) |
 | GND  | POWER (JP2-1 RAW) |
 | P8  | CONTROL |
 
-</td><td>
+ </td><td>
 
 | MOSFET (Transistor) | DC Motor |
 | :---: |:---:|
