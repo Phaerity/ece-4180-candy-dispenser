@@ -168,7 +168,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 
 ![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
 
-
+### Bluetooth connections
 | mbed       | Adafruit BLE          |
 | ------------- |:-------------:|
 | VU (5V)     | Vin (3.3-16V)     |
@@ -177,7 +177,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 | GND      | GND |
 | NC | RTS      |
 
-
+### H-Bridge connections
 | mbed       | H-Bridge   |
 | ------------- |:-------------:|
 | P21 | PWMA     |
@@ -189,7 +189,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 | VOUT | STBY     |
 | GND      | GND |
 
-
+### H-Bridge and Motor connections
 | H-Bridge   | Battery Pack | Left Motor | Right Motor |
 |:-------------:|:-------------:|:-------------:|:-------------:|
 |GND|GND  ||
