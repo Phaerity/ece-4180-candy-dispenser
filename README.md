@@ -196,6 +196,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 
 ![Schematic 2](../main/diagrams/Schematic-2.svg?raw=true "Schematic 2")
 
+
 <table>
 <tr><th> Bluetooth </th><th> H-Bridge </th><th> Motor </tr>
 <tr><td>
