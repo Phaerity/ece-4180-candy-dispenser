@@ -86,5 +86,36 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 
 ![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
 
+
+| mbed       | Adafruit BLE          |
+| ------------- |:-------------:|
+| VU (5V)     | Vin (3.3-16V)     |
+| P27 (RX) | TXO     |
+| P28 (RX) | RXI      |
+| GND      | GND |
+| NC | RTS      |
+
+
+| mbed       | H-Bridge   |
+| ------------- |:-------------:|
+| P21 | PWMA     |
+| P22 | AIN1     |
+| P23 | AIN2     |
+| P24 | PWMB     |
+| P25 | BIN1     |
+| P26 | BIN2     |
+| VOUT | STBY     |
+| GND      | GND |
+
+
+| H-Bridge   | Battery Pack | Left Motor | Right Motor |
+|:-------------:|:-------------:|:-------------:|:-------------:|
+|GND|GND  ||
+|VM, VCC|5V|||
+|A01||GND (BLACK)|
+|A02||POWER (RED)|
+|B01|||POWER(RED)|
+|B02|||GND(BLACK)|
+
 ## Combining Everything
 The box can sit exactly on top of the chassis...
