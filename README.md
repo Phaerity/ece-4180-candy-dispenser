@@ -93,13 +93,15 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 
 Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.  
 
+### Sonar connections
 | mbed       | HC-SR04 |
 | :----: |:----:|
-| VU (5V) | VCC |
 | GND  | GND |
+| VU (5V) | VCC |
 | P6 | TRIG     |
 | P7 | ECHO      |
 
+### LED connections
 | mbed       | LEDs |
 | :---: |:---:|
 | GND  | RED(-), YELLOW (-), GREEN (-) |
@@ -107,6 +109,7 @@ Once the components are in place, they can be wired following the schematic belo
 | P13 | YELLOW (+) |
 | P14 | GREEN (+)|
 
+### MOSFET and Motor connections
 | mbed       | MOSFET (Transistor) |
 | :---: |:---:|
 | VU (5V) | GND (JP2-2 GND) |
@@ -119,6 +122,7 @@ Once the components are in place, they can be wired following the schematic belo
 | POWER (JP1-1) | POWER (+) |
 
 
+### Lidar connections
 | mbed  | LIDAR (VL53L0X) |
 | :---: |:---:|
 | VOUT (3.3V) | VIN |
@@ -127,6 +131,33 @@ Once the components are in place, they can be wired following the schematic belo
 | P25  | SHDN |
 | P27  | SCL |
 | P28  | SDA |
+
+### RGB LED connections
+| mbed  | RGB LED |
+| :---: |:---:|
+| GND  | GND |
+| P21  | RED |
+| P22  | GREEN |
+| P23  | BLUE |
+
+### Speaker connections
+| mbed  | Amp (TPA2005D1) | Speaker |
+| :---: |:---:|:---:|
+| GND  | PWR- (GND), IN- |
+| VU (5V)  | PWR+ |
+| P26  | IN+ |
+|   | OUT+ | + |
+|   | OUT- | - |
+
+### LCD connections
+| mbed  | uLCD HEADER | uLCD CABLE |
+| :---: |:---:|:---:|
+| GND  | GND | GND |
+| VU (5V)  | 5V | 5V |
+| P9 | RX | TX |
+| P10 | RX | TX |
+| P10 | TX | RX |
+| P11 | RESET | RESET |
 
 ## The Chassis
 The robot chassis can be assembled following the Sparkfun guide: https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis. Bluetooth control is added using the Adafruit Bluefruit LE UART Friend board. The Adafruit board mini slide must be set to "UART" (not "CMD"). The "Adafruit Bluefruit BLE" app is used for the user interface and can be found on iOS and Andriod. Select "UART" mode on the phone window and connect to the board. A blue LED should turn on once connected.
