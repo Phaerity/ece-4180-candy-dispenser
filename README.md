@@ -91,9 +91,12 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 
 ![Mounted Components](../main/diagrams/mount_lcd.JPG?raw=true "Mounted Components")
 
-Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.  
+Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.
 
-### Sonar connections
+<table>
+<tr><th> Sonar </th><th>LED </th></tr>
+<tr><td>
+
 | mbed       | HC-SR04 |
 | :----: |:----:|
 | GND  | GND |
@@ -101,28 +104,41 @@ Once the components are in place, they can be wired following the schematic belo
 | P6 | TRIG     |
 | P7 | ECHO      |
 
-### LED connections
+</td><td>
+
 | mbed       | LEDs |
 | :---: |:---:|
 | GND  | RED(-), YELLOW (-), GREEN (-) |
 | P12  | Red (+) |
 | P13 | YELLOW (+) |
 | P14 | GREEN (+)|
+  
+</td></tr> </table>
 
-### MOSFET and Motor connections
+
+<table>
+<tr><th> MOSFET and Motor connections</th><th> DC Motor </th><th>
+<tr><td>
+
 | mbed       | MOSFET (Transistor) |
 | :---: |:---:|
 | VU (5V) | GND (JP2-2 GND) |
 | GND  | POWER (JP2-1 RAW) |
 | P8  | CONTROL |
 
+</td><td>
+
 | MOSFET (Transistor) | DC Motor |
 | :---: |:---:|
 | GND (JP1-2) | GND (-) |
 | POWER (JP1-1) | POWER (+) |
 
+</td></tr> </table>
 
-### Lidar connections
+<table>
+<tr><th> Lidar </th><th> uLCD </th></tr>
+<tr><td>
+
 | mbed  | LIDAR (VL53L0X) |
 | :---: |:---:|
 | VOUT (3.3V) | VIN |
@@ -132,24 +148,8 @@ Once the components are in place, they can be wired following the schematic belo
 | P27  | SCL |
 | P28  | SDA |
 
-### RGB LED connections
-| mbed  | RGB LED |
-| :---: |:---:|
-| GND  | GND |
-| P21  | RED |
-| P22  | GREEN |
-| P23  | BLUE |
+</td><td>
 
-### Speaker connections
-| mbed  | Amp (TPA2005D1) | Speaker |
-| :---: |:---:|:---:|
-| GND  | PWR- (GND), IN- |
-| VU (5V)  | PWR+ |
-| P26  | IN+ |
-|   | OUT+ | + |
-|   | OUT- | - |
-
-### LCD connections
 | mbed  | uLCD HEADER | uLCD CABLE |
 | :---: |:---:|:---:|
 | GND  | GND | GND |
@@ -158,6 +158,31 @@ Once the components are in place, they can be wired following the schematic belo
 | P10 | RX | TX |
 | P10 | TX | RX |
 | P11 | RESET | RESET |
+
+</td></tr> </table>
+
+<table>
+<tr><th> RGB LED connections </th><th>Speaker connections</th></tr>
+<tr><td>
+
+| mbed  | RGB LED |
+| :---: |:---:|
+| GND  | GND |
+| P21  | RED |
+| P22  | GREEN |
+| P23  | BLUE |
+
+</td><td>
+
+| mbed  | Amp (TPA2005D1) | Speaker |
+| :---: |:---:|:---:|
+| GND  | PWR- (GND), IN- |
+| VU (5V)  | PWR+ |
+| P26  | IN+ |
+|   | OUT+ | + |
+|   | OUT- | - |
+
+</td></tr> </table>
 
 ## The Chassis
 The robot chassis can be assembled following the Sparkfun guide: https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis. Bluetooth control is added using the Adafruit Bluefruit LE UART Friend board. The Adafruit board mini slide must be set to "UART" (not "CMD"). The "Adafruit Bluefruit BLE" app is used for the user interface and can be found on iOS and Andriod. Select "UART" mode on the phone window and connect to the board. A blue LED should turn on once connected.
@@ -168,7 +193,10 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 
 ![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
 
-### Bluetooth connections
+<table>
+<tr><th> Bluetooth </th><th> H-Bridge </th><th> Motor </tr>
+<tr><td>
+
 | mbed       | Adafruit BLE          |
 | ------------- |:-------------:|
 | VU (5V)     | Vin (3.3-16V)     |
@@ -177,7 +205,8 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 | GND      | GND |
 | NC | RTS      |
 
-### H-Bridge connections
+</td><td>
+
 | mbed       | H-Bridge   |
 | ------------- |:-------------:|
 | P21 | PWMA     |
@@ -189,7 +218,8 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 | VOUT | STBY     |
 | GND      | GND |
 
-### H-Bridge and Motor connections
+</td><td>
+
 | H-Bridge   | Battery Pack | Left Motor | Right Motor |
 |:-------------:|:-------------:|:-------------:|:-------------:|
 |GND|GND  ||
@@ -198,6 +228,8 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 |A02||POWER (RED)|
 |B01|||POWER(RED)|
 |B02|||GND(BLACK)|
+
+</td></tr> </table>
 
 ## Combining Everything
 The box can sit exactly on top of the chassis...
