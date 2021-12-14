@@ -2,7 +2,9 @@
 Made by: Ikenna Nwokedi, Harneet Sethi, Felicia E, Anna Yue
 
 ## 🍫Project Description🍫
-This device dispenses candy in a hands-free manner, similar to how hands-free soap dispensers work. The dispenser will use a lidar to detect motion and a DC motor to spin some blades that release candy. Inside the dispenser, there is a sonar to detect how much candy is left, and this information is displayed as a status bar using colored LEDs. The dispenser itself will sit on a robot chassis such that someone can drive it around using Bluetooth.
+This device dispenses candy in a hands-free manner, similar to how hands-free soap dispensers work. The dispenser will use a lidar to detect motion and a DC motor to spin some blades that release candy. Inside the dispenser, there is a sonar to detect how much candy is left, and this information is displayed as a status bar using colored LEDs. The dispenser itself will sit on a robot chassis such that someone can drive it around using Bluetooth.  
+
+TODO: Video
 
 ## ⚡Parts List⚡
 ### Robot Chassis
@@ -43,7 +45,9 @@ Drill
 
 # How It Works
 ## Sonar and Capacity Indicator LEDs
-One component of the project is a sonar and led system that continuously measures the depth of candies in the dispenser and alerts the user to how full the box currently is by turning on separate LEDs.
+One component of the project is a sonar and led system that continuously measures the depth of candies in the dispenser and alerts the user to how full the box currently is by turning on separate LEDs.  
+
+TODO: generic pic of sonar and leds (like from sparkfun)
 
 There are three LEDs: green to indicate a full box or a high level of candies, yellow to indicate a medium level of candies, and red to indicate a low level of candies that will need to be quickly replenished.
 
@@ -52,7 +56,11 @@ The sonar used is a HC-SR04 sonar module. It is mounted to the inside of the top
 Depending on the distance that the sonar measures, either one of the LEDs will be switched on while the others are turned off or all LEDs will be turned off and an error message will output through the COM port.  
 
 ## Lidar and DC Motor
-Another component of the project is a lidar and DC motor system that performs the hand-motion detection and actual dispensing of the candy. By reaching into the box with your hand open, the lidar is activated and the DC Motor will spin half a revolution, pushing out some candy with the attached 3D-printed blades.  
+Another component of the project is a lidar and DC motor system that performs the hand-motion detection and actual dispensing of the candy.  
+
+TODO: generic pic of lidar and dc motor
+
+By reaching into the box with your hand open, the lidar is activated and the DC Motor will spin half a revolution, pushing out some candy with the attached 3D-printed blades.  
 
 The lidar used is the VL53L0X module. It is able to detect distances from 30-1000 mm and works similarily to a sonar, except with light instead of ultrasonic waves and a smaller "cone" of detection.  
 
@@ -72,13 +80,16 @@ We started off by creating box using the website https://en.makercase.com/#/. Th
 
 ![Laser Cut Box](../main/diagrams/just_box.JPG?raw=true "Laser Cut Box")
 
-Furthermore, the box must be modified so that the bottom panel becomes like a shelf (see picture). We cut rectangular holes into the sides of the box so that the shelf could "slide" in, but there are other ways to do it if preferable. An additional rectangular hole was cut on the back panel to facillitate wiring, but again this can be changed as you see fit. The files we used to cut the holes are provided in the resources folder.  
-
-For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a xx by xx rectangle on the front panel. For the windmill blade hole, we cut a xx by xx rectangle on the shelf panel.  
-
-> **Note:** We originally proposed using an LED array to display the status for the amount of candy left, but we changed this to individual LEDs to avoid having to replace the parts at the end of the semester.
+Furthermore, the box must be modified so that the bottom panel becomes like a shelf (see picture). We cut rectangular holes into the sides of the box so that the shelf could "slide" in, but there are other ways to do it if preferable.  
 
 ![Modified Box](../main/diagrams/modified_box.JPG?raw=true "Modified Box")
+
+An additional rectangular hole was cut on the back panel to facillitate wiring, but again this can be changed as you see fit. The files we used to cut the holes are provided in the resources folder.  
+![Wire Hole](../main/diagrams/back_hole.JPG?raw=true "Wiring hole")  
+
+For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a 32cm (width) by 38cm (height) rectangle on the front panel. For the windmill blade hole, we cut a xx by xx rectangle on the shelf panel.  
+
+> **Note:** We originally proposed using an LED array to display the status for the amount of candy left, but we changed this to individual LEDs to avoid having to replace the parts at the end of the semester.
 
 ## The Blades
 For the part that releases the candy (referred to as windmill blades), we created a CAD model to 3D print. We used Autodesk Inventor to draw the model before exporting it as an stl file and transferring it to the 3D printer software. These files can be found in the resources folder. Our windmill blades are made from PLA.  
@@ -88,9 +99,13 @@ For the part that releases the candy (referred to as windmill blades), we create
 ## Assembling the Box
 Once the box is cut with all the correct holes and the windmill blades are printed, we can start mounting components in the box. For the purposes of our prototype, components were either taped or glued down, but screws/standoffs are needed if a more permanent solution is desired.  
 
-The uLCD can be first installed by pushing it into the rectangular hole in the front panel. There is a base on the uLCD that prevents it from going all the way through the hole. The windmill blades should snap onto the DC motor axle, and the motor should be positioned on the shelf panel so that the blades can spin freely through the rectangular hole in the shelf panel. The sonar is attached to the underside of the top panel, such that it has a clear vision of the shelf panel without interference from the motor or blades. The LEDs can be pushed through their respective holes and also have a base that prevent them from going all the way through the hole. The lidar is situated on a small breadboard that is attached to the underside of the shelf panel closest to the side where someone would stick their hand through.  
+The uLCD can be first installed by pushing it into the rectangular hole in the front panel. There is a base on the uLCD that prevents it from going all the way through the hole. The windmill blades should snap onto the DC motor axle, and the motor should be positioned on the shelf panel so that the blades can spin freely through the rectangular hole in the shelf panel.  
+![DC motor and blades](../main/diagrams/blade_in_hole.JPG?raw=true "DC motor and windmill blades")  
+The sonar is attached to the underside of the top panel, such that it has a clear vision of the shelf panel without interference from the motor or blades.  
+![Under the lid](../main/diagrams/sonar.JPG?raw=true "Sonar, speaker, mbed under the lid")  
+The LEDs can be pushed through their respective holes and also have a base that prevent them from going all the way through the hole. The lidar is situated on a small breadboard that is attached to the underside of the shelf panel closest to the side where someone would stick their hand through.  
 
-![Mounted Components](../main/diagrams/mount_lcd.JPG?raw=true "Mounted Components")
+![Lidar](../main/diagrams/lidar.JPG?raw=true "Lidar underneath")  
 
 Once the components are in place, they can be wired following the schematics/tables below. 
 
@@ -239,12 +254,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 ## Combining Everything
 We found that the components for the dispenser drew too much current for one battery pack to handle, so we use two battery packs for the dispenser. Specifically, the DC motor is powered by one battery pack, and everything else is powered by the other battery pack.  
 
-uLCD and LEDs mounted on front  
-RGB LED on top  
-Mbed and speaker breadboard, sonar underneath the lid  
-lidar underneath the shelf  
 Battery breadboard on the back  
-DC motor with attached blades sitting in hole  
 One battery pack on top of lid, one below shelf (will sit on top of chassis)  
 
 The box can sit exactly on top of the chassis...
