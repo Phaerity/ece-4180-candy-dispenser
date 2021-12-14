@@ -93,6 +93,41 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 
 Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.  
 
+| mbed       | HC-SR04 |
+| :----: |:----:|
+| VU (5V) | VCC |
+| GND  | GND |
+| P6 | TRIG     |
+| P7 | ECHO      |
+
+| mbed       | LEDs |
+| :---: |:---:|
+| GND  | RED(-), YELLOW (-), GREEN (-) |
+| P12  | Red (+) |
+| P13 | YELLOW (+) |
+| P14 | GREEN (+)|
+
+| mbed       | MOSFET (Transistor) |
+| :---: |:---:|
+| VU (5V) | GND (JP2-2 GND) |
+| GND  | POWER (JP2-1 RAW) |
+| P8  | CONTROL |
+
+| MOSFET (Transistor) | DC Motor |
+| :---: |:---:|
+| GND (JP1-2) | GND (-) |
+| POWER (JP1-1) | POWER (+) |
+
+
+| mbed  | LIDAR (VL53L0X) |
+| :---: |:---:|
+| VOUT (3.3V) | VIN |
+| VU (5V) | VCC |
+| GND  | GND |
+| P25  | SHDN |
+| P27  | SCL |
+| P28  | SDA |
+
 ## The Chassis
 The robot chassis can be assembled following the Sparkfun guide: https://learn.sparkfun.com/tutorials/assembly-guide-for-redbot-with-shadow-chassis. Bluetooth control is added using the Adafruit Bluefruit LE UART Friend board. The Adafruit board mini slide must be set to "UART" (not "CMD"). The "Adafruit Bluefruit BLE" app is used for the user interface and can be found on iOS and Andriod. Select "UART" mode on the phone window and connect to the board. A blue LED should turn on once connected.
 
