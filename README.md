@@ -40,14 +40,23 @@ Super glue
 Electrical tape  
 
 # How It Works
-## Sonar and Volume Indicator LEDs
+## Sonar and Capacity Indicator LEDs
 One component of the project is a sonar and led system that continuously measures the depth of candies in the dispenser and alerts the user to how full the box currently is by turning on separate LEDs.
 
 There are three LEDs: green to indicate a full box or a high level of candies, yellow to indicate a medium level of candies, and red to indicate a low level of candies that will need to be quickly replenished.
 
-The sonar used is a HC-SR04 sonar module. It is mounted to the inside of the top of the box. The detection range is around3-400 cm with around a 15 degree beam width. Its transducers for transmitting and receiving signals are connected to the mbed microcontroller at pins 6 and 7. It uses it's transducers to send out a signal and receive an echo back. The speed of sound and the time as returned by a timer interrupt for the delay transmission and reception are used to calculate the distance between the sonar and the candies closest to it.
+The sonar used is a HC-SR04 sonar module. It is mounted to the inside of the top of the box. The detection range is around3-400 cm with around a 15 degree beam width. Its transducers for transmitting and receiving signals are connected to the mbed microcontroller at pins 6 and 7. It uses its transducers to send out a signal and receive an echo back. The speed of sound and the time as returned by a timer interrupt for the delay transmission and reception are used to calculate the distance between the sonar and the candies closest to it.
 
-Depending on the distance that the sonar meausures, either one of the LEDs will be switched on while the others are turned off or all LEDs will be turned off and an error message will output through the COM port.
+Depending on the distance that the sonar measures, either one of the LEDs will be switched on while the others are turned off or all LEDs will be turned off and an error message will output through the COM port.  
+
+## Lidar and DC Motor
+Another component of the project is a lidar and DC motor system that performs the hand-motion detection and actual dispensing of the candy. By reaching into the box with your hand open, the lidar is activated and the DC Motor will spin half a revolution, pushing out some candy with the attached 3D-printed blades.  
+
+The lidar used is the VL53L0X module. It is able to detect distances from 30-1000 mm and works similarily to a sonar, except with light instead of ultrasonic waves and a smaller "cone" of detection.  
+
+We specifically chose a lidar for this task due to the precision and reliability of the lidar measurements as well as its small size. Additionally, the lidar is situated pointing downwards so that it is always reading ~80 mm, so as soon as that reading drops to 65 mm it knows that some motion is being detected.  
+
+The DC Motor is a standard motor that can be exchanged for a servo if desired. We primarily chose the DC Motor because the axle was easy to design a part to fit onto.  
 
 # Instructions
 ## Cutting the Box
