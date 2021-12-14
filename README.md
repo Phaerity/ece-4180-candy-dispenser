@@ -258,3 +258,6 @@ Battery breadboard on the back
 One battery pack on top of lid, one below shelf (will sit on top of chassis)  
 
 The box can sit exactly on top of the chassis...
+
+# That's All, Folks!
+TODO: gif of spinning robot?
