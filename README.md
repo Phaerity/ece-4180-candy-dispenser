@@ -93,7 +93,7 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 
 Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.
 
-![Schematic 1](../main/diagrams/Schematic-1.JPG?raw=true "Schematic 1")
+![Schematic 1](../main/diagrams/Schematic-1.jpg?raw=true "Schematic 1")
 
 <table>
 <tr><th> Sonar </th><th>LED </th></tr>
@@ -194,7 +194,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 
 ![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
 
-![Schematic 2](../main/diagrams/Schematic-2.JPG?raw=true "Schematic 2")
+![Schematic 2](../main/diagrams/Schematic-2.jpg?raw=true "Schematic 2")
 
 <table>
 <tr><th> Bluetooth </th><th> H-Bridge </th><th> Motor </tr>
