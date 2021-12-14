@@ -200,7 +200,7 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 <tr><th> Bluetooth </th><th> H-Bridge </th><th> Motor </tr>
 <tr><td>
 
-| mbed       | Adafruit BLE          |
+| mbed       | Adafruit BLE  |
 | ------------- |:-------------:|
 | VU (5V)     | Vin (3.3-16V)     |
 | P27 (RX) | TXO     |
