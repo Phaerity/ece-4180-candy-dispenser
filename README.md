@@ -20,7 +20,7 @@ LEDs (1 red, 1 green, 1 yellow) (https://www.sparkfun.com/products/12062)
 Transistor (https://www.sparkfun.com/products/12959)  
 1 DC motor (same as above)  
 Plywood/MDF (https://www.homedepot.com/p/1-4-in-x-2-ft-x-4-ft-Medium-Density-Fiberboard-1508104/202089069#overlay)  
-Battery pack (same as above, or https://www.sparkfun.com/products/9835)  
+2 Battery packs (same as above, or https://www.sparkfun.com/products/9835)  
 Mbed (same as above)  
 Speaker (https://www.sparkfun.com/products/11089)  
 Class D amplifier (https://www.sparkfun.com/products/11044)  
@@ -34,6 +34,7 @@ Wood glue
 Super glue  
 Electrical tape  
 Masking tape  
+AA batteries (or 5V wall plug)
 
 ## 🛠️Tools Needed🛠️
 Laser cutter  
@@ -60,10 +61,10 @@ We specifically chose a lidar for this task due to the precision and reliability
 The DC Motor is a standard motor that can be exchanged for a servo if desired. We primarily chose the DC Motor because the axle was easy to design a part to fit onto.  
 
 ## uLCD, Speaker, and RGB led
-Lorem ipsum delorum  
+TODO: Harneet 
 
 ## Robot Chassis
-Lorem ipsum delorum  
+TODO: Ikenna  
 
 # Instructions
 ## Cutting the Box
@@ -91,7 +92,7 @@ The uLCD can be first installed by pushing it into the rectangular hole in the f
 
 ![Mounted Components](../main/diagrams/mount_lcd.JPG?raw=true "Mounted Components")
 
-Once the components are in place, they can be wired following the schematic below. The photos below also show how our wiring looks.
+Once the components are in place, they can be wired following the schematics/tables below. 
 
 ![Schematic 1](../main/diagrams/Schematic-1.svg?raw=true "Schematic 1")
 
@@ -236,4 +237,14 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 </td></tr> </table>
 
 ## Combining Everything
+We found that the components for the dispenser drew too much current for one battery pack to handle, so we use two battery packs for the dispenser. Specifically, the DC motor is powered by one battery pack, and everything else is powered by the other battery pack.  
+
+uLCD and LEDs mounted on front  
+RGB LED on top  
+Mbed and speaker breadboard, sonar underneath the lid  
+lidar underneath the shelf  
+Battery breadboard on the back  
+DC motor with attached blades sitting in hole  
+One battery pack on top of lid, one below shelf (will sit on top of chassis)  
+
 The box can sit exactly on top of the chassis...
