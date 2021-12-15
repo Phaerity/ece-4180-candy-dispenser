@@ -88,7 +88,20 @@ The speaker is attached to a breadboard which is mounted to the top of the insid
 Lastly, the uLCD is mounted to the front of the dispenser so that the instructions can be viewed at all times by the users, even while the dispenser is moving on the chassi. The text, formatting, etc. on the uLCD can all be altered depending on the circumstance of when the dispenser is being used. The associated uLCD header file makes changing the settings of the uLCD very manageable. 
 
 ## Robot Chassis
-TODO: Ikenna  
+The robot chassis consists of two DC motors, a dual TB6612FNG H-Bridge and an Adafruit Bluefruit LE UART Friend board. Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 are used to set the speed level of the wheels (on a scale from 0 to 1). While the up and down buttons move the motors forward and backward respectfully, the left and right buttons inverse the direction of both motors, resulting in a rotational movement around the chassis center. The motors gradually increase to their set speed for a duration of a second to keep the mbed from undervolting. This is done with a separate thread that starts once a directional button is pressed then terminates at the release of the button. Upon press of a button, an ASCII string is sent to the bluetooth board, which is then decoded in the mbed. More details can be found below.
+
+![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
+
+| GUI Touch Key  | ASCII String | Motor Function
+|:---: |:---:|:---:|
+| Number 1  | "!B11" | 0.25 of max speed |
+| Number 2  | "!B21" | 0.50 of max speed |
+| Number 3  | "!B31" | 0.75 of max speed |
+| Number 4 | "!B41" | Max speed |
+| Up Arrow  | "!B51" | Moves forward |
+| Down Arrow  | "!B61" | Moves backwards |
+| Left Arrow  | "!B71" | Turns left |
+| Right Arrow  | "!B81" | Turns right |
 
 # Instructions
 ## Cutting the Box
@@ -223,9 +236,7 @@ The robot chassis can be assembled following the Sparkfun guide: https://learn.s
 ![Chassis](../main/diagrams/Chassis.JPG?raw=true "Chassis")
 ![Chassis Breadboard](../main/diagrams/Chassis-Breadboard.JPG?raw=true "Chassis Breadboard")
 
-A 6 V battery pack is used to power the two motors attached to the wheels. A dual H-bridge will regulate the speed and direction of the motor wheels. Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 set the speed level of the wheels (on a scale from 0 to 1). While the up and down buttons move the motors forward and backward respectfully, the left and right buttons inverse the direction of both motors, resulting in a rotational movement around the chassis center. The motors must gradually increase to their set speed for a minimum of a second to keep the mbed from undervolting. This is done with a separate thread that terminates at the release of the control button. 
-
-![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
+A 6 V battery pack is used to power the two motors attached to the wheels. A dual H-bridge will regulate the speed and direction of the motor wheels. Both the breadboard implementation and the battery pack will fit into the robot chassis. The schematics/tables for the integration can be found below. 
 
 ![Schematic 2](../main/diagrams/Schematic-2.svg?raw=true "Schematic 2")
 
