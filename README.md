@@ -88,7 +88,13 @@ The speaker is attached to a breadboard which is mounted to the top of the insid
 Lastly, the uLCD is mounted to the front of the dispenser so that the instructions can be viewed at all times by the users, even while the dispenser is moving on the chassi. The text, formatting, etc. on the uLCD can all be altered depending on the circumstance of when the dispenser is being used. The associated uLCD header file makes changing the settings of the uLCD very manageable. 
 
 ## Robot Chassis
-The robot chassis consists of two DC motors, a dual TB6612FNG H-Bridge and an Adafruit Bluefruit LE UART Friend board. Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 are used to set the speed level of the wheels (on a scale from 0 to 1). While the up and down buttons move the motors forward and backward respectfully, the left and right buttons inverse the direction of both motors, resulting in a rotational movement around the chassis center. The motors gradually increase to their set speed for a duration of a second to keep the mbed from undervolting. This is done with a separate thread that starts once a directional button is pressed then terminates at the release of the button. Upon press of a button, an ASCII string is sent to the bluetooth board, which is then decoded in the mbed. More details can be found below.
+The robot chassis consists of two DC motors, a dual TB6612FNG H-Bridge and an Adafruit Bluefruit LE UART Friend board. 
+![Shadow-Chassis](../main/diagrams/Shadow-Chassis.jpg?raw=true "Shadow-Chassis")
+![H-Bridge](../main/diagrams/H-Bridge.jpg?raw=true "H-Bridge")
+![Adafruit-Bluetooth](../main/diagrams/Adafruit-Bluetooth.jpg?raw=true "Adafruit-Bluetooth")
+
+Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 are used to set the speed level of the wheels (on a scale from 0 to 1). While the up and down buttons move the motors forward and backward respectfully, the left and right buttons inverse the direction of both motors, resulting in a rotational movement around the chassis center. The motors gradually increase to their set speed for a duration of a second to keep the mbed from undervolting. This is done with a separate thread that starts once a directional button is pressed then terminates at the release of the button. Upon press of a button, an ASCII string is sent to the bluetooth board, which is then decoded in the mbed. More details can be found below.
+
 
 ![UI Controls](../main/diagrams/BLE_UI_controls.JPG?raw=true "UI Controls")
 
