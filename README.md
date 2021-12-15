@@ -59,7 +59,8 @@ Depending on the distance that the sonar measures, either one of the LEDs will b
 ## Lidar and DC Motor
 Another component of the project is a lidar and DC motor system that performs the hand-motion detection and actual dispensing of the candy.  
 
-TODO: generic pic of lidar and dc motor
+![image](https://github.com/Phaerity/ece-4180-candy-dispenser/blob/main/diagrams/lidar-removebg-preview.png) 
+![image](https://github.com/Phaerity/ece-4180-candy-dispenser/blob/main/diagrams/dc_motors.jpg) 
 
 By reaching into the box with your hand open, the lidar is activated and the DC Motor will spin half a revolution, pushing out some candy with the attached 3D-printed blades.  
 
@@ -268,12 +269,19 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 </td></tr> </table>
 
 ## Combining Everything
-We found that the components for the dispenser drew too much current for one battery pack to handle, so we use two battery packs for the dispenser. Specifically, the DC motor is powered by one battery pack, and everything else is powered by the other battery pack.  
+We found that the components for the dispenser drew too much current for one battery pack to handle, so we use two battery packs for the dispenser. Specifically, the DC motor is powered by one battery pack, and everything else is powered by the other battery pack. One battery pack sits on top of lid and one is located below shelf, sitting on top of chassis. 
 
-Battery breadboard on the back  
-One battery pack on top of lid, one below shelf (will sit on top of chassis)  
+The LIDAR, DC Motor, RBG LED, uLCD, speaker, sonar, and capacity LEDS are all controlled by a mbed microcontroller running multi-threaded RTOS code mounted on the inside of the top wooden pane. All devices except the DC motor and LIDAR are powered by one 5 V battery pack. The LIDAR uses 3.3 V output from the mbed micro controller and the DC motor has a separate battery pack for power, as mentioned before. Both battery packs are connected to two external power source connection jacks on a breadboard mounted on the back of the box. 
 
-The box can sit exactly on top of the chassis...  
+The dispenser box itself sits exactly on the top of the chassis. The chassis itself is controlled by a separate mbed microcontroller.
+
+All code, for the dispenser devices as well as the robot chassis, can be found in the finalCode folder on this github page.
+
+Click the link to see the automated candy dispenser in action! https://youtu.be/Ra_htNfpPXM
+
+## Conclusion
+
+The completed candy dispenser robot is able to move forward, backward, left, and right as directed by the user's Bluefruit Connect application. The candy dispenser is able to drive up to a person and instruct them to "Place hand under dispenser to receive candy" in red text. Once the LIDAR sensor detect an object/the user's hand, it will trigger four events: a song will play from the speaker for as long as the user's hand is underneath the LIDAR, the uLCD's text will turn green to indicate the user's hand has been sensed, the RGB LED will flash on to indicate dispensing in progress, and the DC motor will turn to release a candy. The entire time, the sonar will be constantly measuring the depth of candy in the box; turning on the green, yellow, and red LEDS respectively when the candy volume is high, medium, or low.
 
 # That's All, Folks!
-TODO: gif of spinning robot?
+
