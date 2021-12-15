@@ -47,7 +47,8 @@ Drill
 ## Sonar and Capacity Indicator LEDs
 One component of the project is a sonar and led system that continuously measures the depth of candies in the dispenser and alerts the user to how full the box currently is by turning on separate LEDs.  
 
-TODO: generic pic of sonar and leds (like from sparkfun)
+![image](https://github.com/Phaerity/ece-4180-candy-dispenser/blob/main/diagrams/sonar.jpg) 
+![image](https://github.com/Phaerity/ece-4180-candy-dispenser/blob/main/diagrams/led.jpg)
 
 There are three LEDs: green to indicate a full box or a high level of candies, yellow to indicate a medium level of candies, and red to indicate a low level of candies that will need to be quickly replenished.
 
