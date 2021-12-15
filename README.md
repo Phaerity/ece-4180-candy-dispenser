@@ -88,7 +88,8 @@ The speaker is attached to a breadboard which is mounted to the top of the insid
 Lastly, the uLCD is mounted to the front of the dispenser so that the instructions can be viewed at all times by the users, even while the dispenser is moving on the chassi. The text, formatting, etc. on the uLCD can all be altered depending on the circumstance of when the dispenser is being used. The associated uLCD header file makes changing the settings of the uLCD very manageable. 
 
 ## Robot Chassis
-The robot chassis consists of two DC motors, a dual TB6612FNG H-Bridge and an Adafruit Bluefruit LE UART Friend board. 
+The robot chassis consists of two DC motors, a dual TB6612FNG H-Bridge and an Adafruit Bluefruit LE UART Friend board.
+
 ![Shadow-Chassis](../main/diagrams/Shadow-Chassis.jpg?raw=true "Shadow-Chassis")
 ![H-Bridge](../main/diagrams/H-Bridge.jpg?raw=true "H-Bridge")
 ![Adafruit-Bluetooth](../main/diagrams/Adafruit-Bluetooth.jpg?raw=true "Adafruit-Bluetooth")
