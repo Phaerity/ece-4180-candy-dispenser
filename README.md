@@ -69,7 +69,21 @@ We specifically chose a lidar for this task due to the precision and reliability
 The DC Motor is a standard motor that can be exchanged for a servo if desired. We primarily chose the DC Motor because the axle was easy to design a part to fit onto.  
 
 ## uLCD, Speaker, and RGB led
-TODO: Harneet 
+The last component of the candy dispenser itself includes the uLCD, speaker, and RGB led.  
+
+![image](https://user-images.githubusercontent.com/95767327/146112401-8a470fdb-2f57-44dc-8815-f99d28f43065.png)
+
+![image](https://user-images.githubusercontent.com/95767327/146112804-5072cdd6-99ee-4805-9206-daa84af9c014.png)
+
+![image](https://user-images.githubusercontent.com/95767327/146112849-6c241e03-b5ad-43be-8571-243d1e127d88.png)
+
+Each of these devices alerts the user if their hand has been detected by changing state. At initialization and when no hand is detected, the uLCD provides instructions for how to use the automated dispenser, the RGB led is off, and the speaker is not playing any sounds. Upon a hand-motion detection, the lidar triggers the uLCD to display instructions on how to stop receiving candy, the RGB led is lit up white, and the speaker plays Ramblin' Wreck. This state is present until the hand is no longer detected.
+
+The RGB led is placed on top of the dispenser for an easy visual indicator of whether a user's hand has been detected by the dispenser. The color of the RGB can be changed at anytime in software, since the pin connections used support PWM. For the purposes of the prototype, white was used.
+
+The speaker is attached to a breadboard which is mounted to the top of the inside of the dispenser. This design decision allows the dispenser to be more visually appealing, by concealing the speaker, but also provides an auditory indicator associated with the lidar detecting a hand motion. In some instances (depending on the sound/tone being played), the speaker needs to be driven for better audio quality. Therefore, this project includes a Class D Audio Amplifier (TPA2005D1) attached to the breadboard and wired to the speaker (pin connections included below). This approach uses PWM hardware which is more energy efficient than using analog. The SongPlayer header file is used in software, which means the song/sound played and the volume can be easily changed/adjusted at anytime by modifying the appropriate parameters.
+
+Lastly, the uLCD is mounted to the front of the dispenser so that the instructions can be viewed at all times by the users, even while the dispenser is moving on the chassi. The text, formatting, etc. on the uLCD can all be altered depending on the circumstance of when the dispenser is being used. The associated uLCD header file makes changing the settings of the uLCD very manageable. 
 
 ## Robot Chassis
 TODO: Ikenna  
