@@ -4,7 +4,7 @@ Made by: Ikenna Nwokedi, Harneet Sethi, Felicia E, Anna Yue
 ## 🍫Project Description🍫
 This device dispenses candy in a hands-free manner, similar to how hands-free soap dispensers work. The dispenser will use a lidar to detect motion and a DC motor to spin some blades that release candy. Inside the dispenser, there is a sonar to detect how much candy is left, and this information is displayed as a status bar using colored LEDs. The dispenser itself will sit on a robot chassis such that someone can drive it around using Bluetooth.  
 
-TODO: Video
+See the automated candy dispenser in action! - https://youtu.be/Ra_htNfpPXM
 
 ## ⚡Parts List⚡
 ### Robot Chassis
@@ -274,8 +274,6 @@ Battery breadboard on the back
 One battery pack on top of lid, one below shelf (will sit on top of chassis)  
 
 The box can sit exactly on top of the chassis...  
-
-Click the link to see the automated candy dispenser in action! https://youtu.be/Ra_htNfpPXM
 
 # That's All, Folks!
 TODO: gif of spinning robot?
