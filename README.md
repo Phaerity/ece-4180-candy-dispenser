@@ -101,10 +101,10 @@ Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 are used to set the
 
 | GUI Touch Key  | ASCII String | Motor Function
 |:---: |:---:|:---:|
-| Number 1  | "!B11" | 0.25 of max speed |
-| Number 2  | "!B21" | 0.50 of max speed |
-| Number 3  | "!B31" | 0.75 of max speed |
-| Number 4 | "!B41" | Max speed |
+| Button 1  | "!B11" | 0.25 of max speed |
+| Button 2  | "!B21" | 0.50 of max speed |
+| Button 3  | "!B31" | 0.75 of max speed |
+| Button 4 | "!B41" | Max speed |
 | Up Arrow  | "!B51" | Moves forward |
 | Down Arrow  | "!B61" | Moves backwards |
 | Left Arrow  | "!B71" | Turns left |
