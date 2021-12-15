@@ -272,7 +272,9 @@ We found that the components for the dispenser drew too much current for one bat
 Battery breadboard on the back  
 One battery pack on top of lid, one below shelf (will sit on top of chassis)  
 
-The box can sit exactly on top of the chassis...
+The box can sit exactly on top of the chassis...  
+
+Click the link to see the automated candy dispenser in action! https://youtu.be/Ra_htNfpPXM
 
 # That's All, Folks!
 TODO: gif of spinning robot?
