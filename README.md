@@ -301,4 +301,5 @@ All code, for the dispenser devices as well as the robot chassis, can be found i
 
 The completed candy dispenser robot is able to move forward, backward, left, and right as directed by the user's Bluefruit Connect application. The candy dispenser is able to drive up to a person and instruct them to "Place hand under dispenser to receive candy" in red text. Once the LIDAR sensor detect an object/the user's hand, it will trigger four events: a song will play from the speaker for as long as the user's hand is underneath the lidar, the uLCD's text will turn green to indicate the user's hand has been sensed, the RGB LED will flash on to indicate dispensing in progress, and the DC motor will turn to release a candy. The entire time, the sonar will be constantly measuring the depth of candy in the box; turning on the green, yellow, and red LEDs respectively when the candy volume is high, medium, or low.
 
-# That's All, Folks!
+![giphy](https://user-images.githubusercontent.com/22159703/146288026-3d8c6736-ec99-4f83-9e93-4c615d6fa344.gif)
+
