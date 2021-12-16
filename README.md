@@ -36,7 +36,7 @@ Wood glue
 Super glue  
 Electrical tape  
 Masking tape  
-AA batteries (or 5V wall plug)
+AA batteries (or 5V wall plugs)
 
 ## 🛠️Tools Needed🛠️
 Laser cutter  
@@ -81,11 +81,11 @@ The last component of the candy dispenser itself includes the uLCD, speaker, and
 
 Each of these devices alerts the user if their hand has been detected by changing state. At initialization and when no hand is detected, the uLCD provides instructions for how to use the automated dispenser, the RGB led is off, and the speaker is not playing any sounds. Upon a hand-motion detection, the lidar triggers the uLCD to display instructions on how to stop receiving candy, the RGB led is lit up white, and the speaker plays Ramblin' Wreck. This state is present until the hand is no longer detected.
 
-The RGB led is placed on top of the dispenser for an easy visual indicator of whether a user's hand has been detected by the dispenser. The color of the RGB can be changed at anytime in software, since the pin connections used support PWM. For the purposes of the prototype, white was used.
+The RGB led is placed on top of the dispenser for an easy visual indicator of whether a user's hand has been detected by the dispenser. The color of the RGB can be changed at any time in software, since the pin connections used support PWM. For the purposes of the prototype, white was used.
 
 The speaker is attached to a breadboard which is mounted to the top of the inside of the dispenser. This design decision allows the dispenser to be more visually appealing, by concealing the speaker, but also provides an auditory indicator associated with the lidar detecting a hand motion. In some instances (depending on the sound/tone being played), the speaker needs to be driven for better audio quality. Therefore, this project includes a Class D Audio Amplifier (TPA2005D1) attached to the breadboard and wired to the speaker (pin connections included below). This approach uses PWM hardware which is more energy efficient than using analog. The SongPlayer header file is used in software, which means the song/sound and the volume can be easily changed/adjusted at anytime by modifying the appropriate parameters.
 
-Lastly, the uLCD is mounted to the front of the dispenser so that the instructions can be viewed at all times by the users, even while the dispenser is moving on the chassi. The text, formatting, etc. on the uLCD can all be altered depending on the circumstance of when the dispenser is being used. The associated uLCD header file makes changing the settings of the uLCD very manageable. 
+Lastly, the uLCD is mounted to the front of the dispenser so that the instructions can be viewed at all times by the users, even while the dispenser is moving on the chassis. The text, formatting, etc. on the uLCD can all be altered depending on the circumstance of when the dispenser is being used. The associated uLCD header file makes changing the settings of the uLCD very manageable. 
 
 ## Robot Chassis
 The robot chassis consists of two DC motors, a dual TB6612FNG H-Bridge and an Adafruit Bluefruit LE UART Friend board.
@@ -112,7 +112,9 @@ Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 are used to set the
 
 # Instructions
 ## Cutting the Box
-We started off by creating box using the website https://en.makercase.com/#/. The settings we used are as follows: Basic Box, Width 5 in., Height 8 in., Length 8 in., Outside dimensions, Material Thickness 1/4 in., Closed box, Finger joints sized 1.0915. These settings can be customized based on how big you want the dispenser to be and thickness of your wood. The box plans can be downloaded with labels disabled and separate panel layout, and these files can be used to laser cut the box at either the Hive or Invention Studio. The files we used are provided in the resources folder.  
+We started off by creating box using the website https://en.makercase.com/#/. The settings we used are as follows: Basic Box, Width 5 in., Height 8 in., Length 8 in., Outside dimensions, Material Thickness 1/4 in., Closed box, Finger joints sized 1.0915. These settings can be customized based on how big you want the dispenser to be and thickness of your wood. The box plans can be downloaded with labels disabled and separate panel layout, and these files can be used to laser cut the box at either the Hive or Invention Studio. The files we used (with Inkscape) are provided in the resources folder.
+
+> **Note:** For our project, we used 1/4" MDF to create the box, but we realize that lighter wood is preferable to reduce the weight of the dispenser. Therefore, you may want to consider using birch plywood or balsa wood.  
 
 ![Laser Cut Box](../main/diagrams/just_box.JPG?raw=true "Laser Cut Box")
 
@@ -120,15 +122,15 @@ Furthermore, the box must be modified so that the bottom panel becomes like a sh
 
 ![Modified Box](../main/diagrams/modified_box.JPG?raw=true "Modified Box")
 
-An additional rectangular hole was cut on the back panel to facillitate wiring, but again this can be changed as you see fit. The files we used to cut the holes are provided in the resources folder.  
+An additional rectangular hole was cut on the back panel to facillitate wiring, but again this can be changed as you see fit.  
 ![Wire Hole](../main/diagrams/back_hole.JPG?raw=true "Wiring hole")  
 
-For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a 32cm (width) by 38cm (height) rectangle on the front panel. For the windmill blade hole, we cut a xx by xx rectangle on the shelf panel.  
+For the LED holes, we used a 7/32" drill bit and approximated the locations. The red, yellow, and green LEDs are on the front panel, and the RGB LED is on the top panel. For the uLCD hole, we cut a 32mm (width) by 38mm (length) rectangle on the front panel. For the windmill blade hole, we cut a 40mm (width) by 80mm (length) rectangle on the shelf panel.  
 
 > **Note:** We originally proposed using an LED array to display the status for the amount of candy left, but we changed this to individual LEDs to avoid having to replace the parts at the end of the semester.
 
 ## The Blades
-For the part that releases the candy (referred to as windmill blades), we created a CAD model to 3D print. We used Autodesk Inventor to draw the model before exporting it as an stl file and transferring it to the 3D printer software. These files can be found in the resources folder. Our windmill blades are made from PLA.  
+For the part that releases the candy (referred to as windmill blades), we created a CAD model to 3D print. We used Autodesk Inventor to draw the model before exporting it as an stl file and transferring it to 3D printer software. These files can be found in the resources folder. Our windmill blades are made from PLA.  
 
 ![Windmill Blades](../main/diagrams/windmill_blades.JPG?raw=true "Windmill Blades")
 
@@ -289,16 +291,14 @@ A 6 V battery pack is used to power the two motors attached to the wheels. A dua
 ## Combining Everything
 We found that the components for the dispenser drew too much current for one battery pack to handle, so we use two battery packs for the dispenser. Specifically, the DC motor is powered by one battery pack, and everything else is powered by the other battery pack. One battery pack sits on top of lid and one is located below shelf, sitting on top of chassis. 
 
-The LIDAR, DC Motor, RBG LED, uLCD, speaker, sonar, and capacity LEDS are all controlled by a mbed microcontroller running multi-threaded RTOS code mounted on the inside of the top wooden pane. All devices except the DC motor and LIDAR are powered by one 5 V battery pack. The LIDAR uses 3.3 V output from the mbed micro controller and the DC motor has a separate battery pack for power, as mentioned before. Both battery packs are connected to two external power source connection jacks on a breadboard mounted on the back of the box. 
+The lidar, DC Motor, RBG LED, uLCD, speaker, sonar, and capacity LEDS are all controlled by a mbed microcontroller running multi-threaded RTOS code mounted on the inside of the top wooden pane. All devices except the DC motor and lidar are powered by one 5 V battery pack. The lidar uses 3.3 V output from the mbed micro controller and the DC motor has a separate battery pack for power, as mentioned before. Both battery packs are connected to two external power source connection jacks on a breadboard mounted on the back of the box. 
 
 The dispenser box itself sits exactly on the top of the chassis. The chassis itself is controlled by a separate mbed microcontroller.
 
-All code, for the dispenser devices as well as the robot chassis, can be found in the finalCode folder on this github page.
-
-Click the link to see the automated candy dispenser in action! https://youtu.be/Ra_htNfpPXM
+All code, for the dispenser devices as well as the robot chassis, can be found in the finalCode folder on this github page.  
 
 ## Conclusion
 
-The completed candy dispenser robot is able to move forward, backward, left, and right as directed by the user's Bluefruit Connect application. The candy dispenser is able to drive up to a person and instruct them to "Place hand under dispenser to receive candy" in red text. Once the LIDAR sensor detect an object/the user's hand, it will trigger four events: a song will play from the speaker for as long as the user's hand is underneath the LIDAR, the uLCD's text will turn green to indicate the user's hand has been sensed, the RGB LED will flash on to indicate dispensing in progress, and the DC motor will turn to release a candy. The entire time, the sonar will be constantly measuring the depth of candy in the box; turning on the green, yellow, and red LEDS respectively when the candy volume is high, medium, or low.
+The completed candy dispenser robot is able to move forward, backward, left, and right as directed by the user's Bluefruit Connect application. The candy dispenser is able to drive up to a person and instruct them to "Place hand under dispenser to receive candy" in red text. Once the LIDAR sensor detect an object/the user's hand, it will trigger four events: a song will play from the speaker for as long as the user's hand is underneath the lidar, the uLCD's text will turn green to indicate the user's hand has been sensed, the RGB LED will flash on to indicate dispensing in progress, and the DC motor will turn to release a candy. The entire time, the sonar will be constantly measuring the depth of candy in the box; turning on the green, yellow, and red LEDs respectively when the candy volume is high, medium, or low.
 
 # That's All, Folks!
