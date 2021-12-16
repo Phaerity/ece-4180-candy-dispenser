@@ -295,7 +295,7 @@ The lidar, DC Motor, RBG LED, uLCD, speaker, sonar, and capacity LEDS are all co
 
 The dispenser box itself sits exactly on the top of the chassis. The chassis itself is controlled by a separate mbed microcontroller.
 
-All code, for the dispenser devices as well as the robot chassis, can be found in the finalCode folder on this github page.  
+All code, for the dispenser devices as well as the robot chassis, can be found in the finalCode folder on this github page (chassis.cpp and the Motor folder are for the chassis mbed, main.cpp and everything else are for the dispenser mbed).   
 
 ## Conclusion
 
