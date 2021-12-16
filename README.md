@@ -112,7 +112,7 @@ Using the Adafruit Bluefruit BLE app, buttons 1, 2, 3, and 4 are used to set the
 
 # Instructions
 ## Cutting the Box
-We started off by creating box using the website https://en.makercase.com/#/. The settings we used are as follows: Basic Box, Width 5 in., Height 8 in., Length 8 in., Outside dimensions, Material Thickness 1/4 in., Closed box, Finger joints sized 1.0915. These settings can be customized based on how big you want the dispenser to be and thickness of your wood. The box plans can be downloaded with labels disabled and separate panel layout, and these files can be used to laser cut the box at either the Hive or Invention Studio. The files we used (with Inkscape) are provided in the resources folder.
+We started off by creating box using the website https://en.makercase.com/#/. The settings we used are as follows: Basic Box, Width 5 in., Height 8 in., Length 8 in., Outside dimensions, Material Thickness 1/4 in., Closed box, Finger joints sized 1.0915. These settings can be customized based on how big you want the dispenser to be and thickness of your wood. The box plans can be downloaded with labels disabled and separate panel layout, and these files can be used to laser cut the box at either the Hive or Invention Studio. The files we used (with Inkscape) are provided in the diagrams folder (box.svg).
 
 > **Note:** For our project, we used 1/4" MDF to create the box, but we realize that lighter wood is preferable to reduce the weight of the dispenser. Therefore, you may want to consider using birch plywood or balsa wood.  
 
@@ -130,7 +130,7 @@ For the LED holes, we used a 7/32" drill bit and approximated the locations. The
 > **Note:** We originally proposed using an LED array to display the status for the amount of candy left, but we changed this to individual LEDs to avoid having to replace the parts at the end of the semester.
 
 ## The Blades
-For the part that releases the candy (referred to as windmill blades), we created a CAD model to 3D print. We used Autodesk Inventor to draw the model before exporting it as an stl file and transferring it to 3D printer software. These files can be found in the resources folder. Our windmill blades are made from PLA.  
+For the part that releases the candy (referred to as windmill blades), we created a CAD model to 3D print. We used Autodesk Inventor to draw the model before exporting it as an stl file and transferring it to 3D printer software. These files can be found in the diagrams folder (windmillv3.stl and windmillv3.ipt). Our windmill blades are made from PLA.  
 
 ![Windmill Blades](../main/diagrams/windmill_blades.JPG?raw=true "Windmill Blades")
 
